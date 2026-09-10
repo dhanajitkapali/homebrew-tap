@@ -1,18 +1,23 @@
-# Dhanajitkapali Tap
+# dhanajitkapali/homebrew-tap
 
-## How do I install these formulae?
+Homebrew tap for [Markmer](https://dhanajitkapali.github.io/Markmer/), a native macOS Markdown reader with inline Mermaid diagrams.
 
-`brew install dhanajitkapali/tap/<formula>`
+## Install
 
-Or `brew tap dhanajitkapali/tap` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "dhanajitkapali/tap"
-brew "<formula>"
+```bash
+brew install --cask dhanajitkapali/tap/markmer
 ```
 
-## Documentation
+Markmer is open source but not notarized, so macOS asks for confirmation on first launch. To skip that dialog, install without the quarantine flag:
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+```bash
+brew install --cask --no-quarantine dhanajitkapali/tap/markmer
+```
+
+## Update
+
+```bash
+brew upgrade --cask markmer
+```
+
+The cask is bumped automatically by the [Markmer release workflow](https://github.com/dhanajitkapali/Markmer/blob/main/.github/workflows/release.yml) whenever a new version is tagged.
